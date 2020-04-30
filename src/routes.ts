@@ -1,23 +1,28 @@
-import {UserController} from "./controller/UserController";
+import { PokemonController } from "./controller/PokemonController";
 
-export const Routes = [{
+export const Routes = [
+  {
     method: "get",
-    route: "/users",
-    controller: UserController,
-    action: "all"
-}, {
+    route: "/pokemon",
+    controller: PokemonController,
+    action: "all",
+  },
+  {
     method: "get",
-    route: "/users/:id",
-    controller: UserController,
-    action: "one"
-}, {
+    route: "/pokemon/:id",
+    controller: PokemonController,
+    action: "one",
+  },
+  {
     method: "post",
-    route: "/users",
-    controller: UserController,
-    action: "save"
-}, {
+    route: "/pokemon",
+    controller: PokemonController,
+    action: "save",
+  },
+  {
     method: "delete",
-    route: "/users/:id",
-    controller: UserController,
-    action: "remove"
-}];
+    route: "/pokemon/:id",
+    controller: PokemonController,
+    action: "remove",
+  },
+];
