@@ -8,4 +8,6 @@ export class Abilities {
   normal: string[];
   @Column()
   hidden: string[];
+  @Column()
+  cp: number;
 }

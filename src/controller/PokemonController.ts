@@ -1,4 +1,4 @@
-import { getRepository } from "typeorm";
+import { getRepository, Equal } from "typeorm";
 import { NextFunction, Request, Response } from "express";
 import { Pokemon } from "../entity/Pokemon";
 
@@ -10,7 +10,9 @@ export class PokemonController {
   }
 
   async one(request: Request, response: Response, next: NextFunction) {
-    return this.PokemonRepository.findOne(request.params.id);
+    return this.PokemonRepository.findOne({
+      where: { number: request.params.id },
+    });
   }
 
   async save(request: Request, response: Response, next: NextFunction) {
