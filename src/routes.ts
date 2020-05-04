@@ -1,4 +1,5 @@
 import { PokemonController } from "./controller/PokemonController";
+import { TrainerController } from "./controller/TrainerController";
 
 export const Routes = [
   {
@@ -23,6 +24,30 @@ export const Routes = [
     method: "delete",
     route: "/pokemon/:id",
     controller: PokemonController,
+    action: "remove",
+  },
+  {
+    method: "get",
+    route: "/trainer",
+    controller: TrainerController,
+    action: "all",
+  },
+  {
+    method: "get",
+    route: "/trainer/:id",
+    controller: TrainerController,
+    action: "one",
+  },
+  {
+    method: "post",
+    route: "/trainer",
+    controller: TrainerController,
+    action: "save",
+  },
+  {
+    method: "delete",
+    route: "/trainer/:id",
+    controller: TrainerController,
     action: "remove",
   },
 ];

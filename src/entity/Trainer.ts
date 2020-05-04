@@ -1,4 +1,5 @@
-import { Entity, Column, ObjectIdColumn } from "typeorm";
+import { Entity, Column, ObjectIdColumn, OneToMany } from "typeorm";
+import { TrainerPokemon } from "./TrainerPokemon";
 
 @Entity()
 export class Trainer {
@@ -20,4 +21,9 @@ export class Trainer {
   totalxp: number;
   @Column()
   startdate: Date;
+  // @OneToMany(
+  //   (type) => TrainerPokemon,
+  //   (prainerpokemon) => prainerpokemon.trainerid
+  // )
+  trainerpokemons: TrainerPokemon[];
 }
