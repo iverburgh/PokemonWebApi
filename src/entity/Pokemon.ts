@@ -7,7 +7,7 @@ export class Pokemon {
   @ObjectIdColumn()
   id: string;
   @Column()
-  number: string;
+  number: number;
   @Column()
   name: string;
   @Column()
