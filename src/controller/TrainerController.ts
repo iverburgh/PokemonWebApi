@@ -17,6 +17,10 @@ export class TrainerController {
     return this.TrainerRepository.save(request.body);
   }
 
+  async update(request: Request, response: Response, next: NextFunction) {
+    await this.TrainerRepository.update(request.params.id, request.body);
+  }
+
   async remove(request: Request, response: Response, next: NextFunction) {
     let TrainerToRemove = await this.TrainerRepository.findOne(
       request.params.id

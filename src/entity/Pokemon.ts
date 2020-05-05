@@ -14,7 +14,7 @@ export class Pokemon {
   species: string;
   @Column()
   types: string[];
-  @Column()
+  @Column((type) => Abilities)
   abilities: Abilities;
   @Column()
   eggGroups: string[];
@@ -24,7 +24,7 @@ export class Pokemon {
   height: string;
   @Column()
   weight: string;
-  @Column()
+  @Column((type) => Family)
   family: Family;
   @Column()
   starter: boolean;

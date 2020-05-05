@@ -45,6 +45,12 @@ export const Routes = [
     action: "save",
   },
   {
+    method: "put",
+    route: "/trainer/:id",
+    controller: TrainerController,
+    action: "update",
+  },
+  {
     method: "delete",
     route: "/trainer/:id",
     controller: TrainerController,

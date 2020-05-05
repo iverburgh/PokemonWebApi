@@ -21,9 +21,6 @@ export class Trainer {
   totalxp: number;
   @Column()
   startdate: Date;
-  // @OneToMany(
-  //   (type) => TrainerPokemon,
-  //   (prainerpokemon) => prainerpokemon.trainerid
-  // )
+  @Column((type) => TrainerPokemon)
   trainerpokemons: TrainerPokemon[];
 }
