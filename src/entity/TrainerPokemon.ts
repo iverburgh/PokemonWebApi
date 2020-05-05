@@ -6,7 +6,7 @@ export class TrainerPokemon {
   @ObjectIdColumn()
   id: string;
   @Column()
-  pokemonid: string;
+  pokemonnumber: number;
   @Column()
   caughtdate: Date;
 }
