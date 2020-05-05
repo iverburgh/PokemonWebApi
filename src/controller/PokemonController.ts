@@ -26,3 +26,5 @@ export class PokemonController {
     await this.PokemonRepository.remove(PokemonToRemove);
   }
 }
+
+export default PokemonController;
