@@ -6,6 +6,8 @@ export class TrainerPokemon {
   @ObjectIdColumn()
   id: string;
   @Column()
+  pokemonname: string;
+  @Column()
   pokemonnumber: number;
   @Column()
   caughtdate: Date;
