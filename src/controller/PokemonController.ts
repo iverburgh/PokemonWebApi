@@ -1,9 +1,9 @@
-import { getRepository, Equal } from "typeorm";
+import { getMongoRepository, Equal } from "typeorm";
 import { NextFunction, Request, Response } from "express";
 import { Pokemon } from "../entity/Pokemon";
 
 export class PokemonController {
-  private PokemonRepository = getRepository(Pokemon);
+  private PokemonRepository = getMongoRepository(Pokemon);
 
   async all(request: Request, response: Response, next: NextFunction) {
     return this.PokemonRepository.find();

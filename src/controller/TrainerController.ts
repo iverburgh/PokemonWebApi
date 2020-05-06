@@ -1,9 +1,9 @@
-import { getRepository, Equal } from "typeorm";
+import { getMongoRepository, Equal, getMongoManager } from "typeorm";
 import { NextFunction, Request, Response } from "express";
 import { Trainer } from "../entity/Trainer";
 
 export class TrainerController {
-  private TrainerRepository = getRepository(Trainer);
+  private TrainerRepository = getMongoRepository(Trainer);
 
   async all(request: Request, response: Response, next: NextFunction) {
     return this.TrainerRepository.find();
